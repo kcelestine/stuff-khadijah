@@ -1,0 +1,7 @@
+- hosts: web
+  become: yes
+  tasks:
+    - name: deploy tomcat.conf
+      template:
+        src: tomcat.conf.j2
+        dest: /home/ec2-user/khadijah/tomcat.conf
